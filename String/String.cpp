@@ -5,7 +5,8 @@ String String::left(int range)
 {
   if (range > len || range < 0)
   {
-    std::cerr << 'Wrong range in String::left()';
+    std::cerr << "Wrong range in String::left()";
+    exit(-1);
     return NULL;
   }
 
@@ -29,7 +30,8 @@ String String::right(int range)
 {
   if (range > len || range < 0)
   {
-    std::cerr << 'Wrong range in String::right()';
+    std::cerr << "Wrong range in String::right()";
+    exit(-3);
     return NULL;
   }
 
@@ -53,7 +55,8 @@ String String::mid(int start)
 {
   if (start >= len || start < 0)
   {
-    std::cerr << 'Wrong range in String::mid()';
+    std::cerr << "Wrong range in String::mid()";
+    exit(-2);
     return NULL;
   }
 
@@ -77,7 +80,8 @@ String String::mid(int start, int range)
 {
   if (start >= len || start < 0 || range + start - 1 >= len || range < 0)
   {
-    std::cerr << 'Wrong range in String::mid()';
+    std::cerr << "Wrong range in String::mid()";
+    exit(-2);
     return NULL;
   }
 
