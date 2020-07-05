@@ -7,12 +7,13 @@ public:
     NumberSystem operator*(const NumberSystem &right);
     NumberSystem operator/(const NumberSystem &right);
 
-    // конструкторы
+    // конструкторы и деструктор
     NumberSystem();
     NumberSystem(int, int);
+    ~NumberSystem();
 
     // установка значения (в с/с)
-    void set_value(const char*);
+    void set_value(const char *);
     // установка значения (в десятичной с/с)
     void set_decimal(int);
     // смена системы счисления
@@ -21,17 +22,14 @@ public:
     // получение значения (в десятичнй с/с)
     int get_decimal();
     // получение значения (в с/с)
-    char* get_value();
+    char *get_value();
     // получение системы счисления
     int get_system();
+
 private:
     int dec_value, num_sys;
+    char sign;
 
     int sys_size;
-    char* sys_value;
-
-    // перевод в с/с
-    char* to_sys(int);
-    // перевод в десятичую с/с
-    int to_dec(int);
+    char *sys_value;
 };
